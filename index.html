@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Design</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script defer src="main.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<main>
+		<header>
+			<div class="logo" >
+				<img src="assets/img/logo.png"/>
+			</div>
+			<nav  class="topnav" id="responsiveTopnav">
+				<a href="index.html#footer-container">About</a>
+				<a href="reservation.html">Reservation</a>
+				<a href="news.html">News</a>
+				<a href="index.html">Home</a>
+				<a href="javascript:void(0);" class="icon" onclick="openMenu()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</nav>
+		</header>
+
+		<section class="content-container">
+			<h1>Our Hotels</h1>
+			<div class="hotels">
+				<div class="hotels-info">
+					<div class="hotels-img">
+						<img src="circle-cropped (1).png" alt="img-hotel">
+					</div>
+					<h3>Germany</h3>
+					<p class="role">Situated in the charming village of Hawkshead, Walker Ground Manor is a traditional country house dating back to 16th century. Guests can benefit from free WiFi, free parking, and easy access to the picturesque countryside.</p>
+					<p>1/3</p>
+				</div>
+				<div class="hotels-info">
+					<div class="hotels-img">
+						<img src="circle-cropped (2).png" alt="img-hotel">
+					</div>
+					<h3>UK</h3>
+					<p class="role">A hearty breakfast prepared with the finest, locally sourced produce, is served daily in the dining room or bright conservatory. The breakfast menu includes vegetarian options, cooked food, and full English breakfast.
+					<p>2/3</p>
+				</div>
+				<div class="hotels-info">
+					<div class="hotels-img">
+						<img src="circle-cropped.png" alt="img-hotel">
+					</div>
+					<h3>Turkey</h3>
+					<p class="role">he refurbished rooms at Walker Ground boast some original features such as oak wooden floors, exposed beams, and vaulted ceilings. Each room features an en suite bathroom, a seating area.</p>
+					<p>3/3</p>
+				</div>
+			</div>
+			<div class="button">
+				<a href="watch-video.mp4"><b>WATCH VIDEO</b></a>
+			</div>
+		</section>
+	</main>	
+	<button class="open-button" onclick="openForm()">Open Form</button>
+
+		<div class="form-popup" id="myForm">
+		  <form  class="form-container" method="post">
+		    <h1>Sing In</h1>
+
+		    <input type="text" id="firstname" placeholder="First Name" name="firstname">
+		    <input type="text" id="lastname" placeholder="Last Name" name="lastname">
+		    <input type="text" id="email" placeholder="Enter Email" name="email">
+		    <input type="password" id="pass" placeholder="Enter Password" name="pass">
+
+		    <button type="submit" class="btn" onclick="return Validate()">Sign In</button>
+		    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		    <p id="errors" style="color: red;"></p>
+		  </form>
+		</div>
+	<footer>
+		<div>
+			&copy; demetrakaram.com | Designed by Demetra K.	
+		</div>
+	</footer> 
+	<script>
+		function openMenu() {
+		  var x = document.getElementById("responsiveTopnav");
+		  if (x.className === "topnav") {
+		    x.className += " responsive";
+		  } else {
+		    x.className = "topnav";
+		  }
+		}
+		function openForm() {
+		  document.getElementById("myForm").style.display = "block";
+		}
+
+		function closeForm() {
+		  document.getElementById("myForm").style.display = "none";
+		}
+
+		function Validate() {
+            var errors = "";
+            
+			var firstname = document.getElementById('firstname').value;
+			var lastname = document.getElementById('lastname').value;
+			var email = document.getElementById('email').value;
+			var pass = document.getElementById('pass').value;
+
+            var isValid = true;
+            
+            if (firstname == '' || firstname.length < 5) {
+				errors += "First Name is not correct!<br>";				              
+               
+                isValid = isValid && false;
+            }
+            
+			if (lastname == '' || lastname.length < 5) {
+				errors += "Last Name is not correct!<br>";
+                
+                isValid = isValid && false;
+            } 
+            
+			if(email.indexOf('@') === -1 || email.indexOf('.') === -1){
+				errors += "Invalid email!<br>";
+              
+                isValid = isValid && false;
+            }
+            
+			if(pass.match(/^[0-9]\w{1,14}$/)){
+				errors += "Pass must contain numbers!<br>"; 
+                
+                isValid = isValid && false;
+            }
+            
+			if(pass.match(/^[A-Z]\w{1,14}$/)){
+				errors += "Pass must contain Capital Letters!<br>"; 
+                
+                isValid = isValid && false;
+            }
+            
+			if(pass.indexOf('!') === -1 || email.indexOf('.') === -1){
+				errors += "Invalid pass!<br>";
+                
+                isValid = isValid && false;
+			}
+            
+            if(!isValid){
+                var errorsInput = document.getElementById('errors');
+                errorsInput.innerHTML = errors;
+                return false;
+            }
+            return true;
+		}	
+	</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News Wed Design</title>
+	<link rel="stylesheet" type="text/css" href="news.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script defer src="main.js"></script>
+</head>
+<body class="main-container">
+
+	<section id="gallery">
+	<div class="test">
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+			  <img src="https://cdn.pixabay.com/photo/2017/07/24/12/43/schrecksee-2534484_1280.jpg">
+			  <div class="text">1/3</div>
+			</div>
+
+			<div class="mySlides fade">
+			  <img src="https://cdn.pixabay.com/photo/2016/11/29/13/04/forest-1869713_1280.jpg">
+			  <div class="text">2/3</div>
+			</div>
+
+			<div class="mySlides fade">
+			  <img src="https://cdn.pixabay.com/photo/2016/09/19/22/46/hut-1681485_1280.jpg" >
+			  <div class="text">3/3</div>
+			</div>
+		</div>
+	</section>
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+	<br>
+
+	<div style="text-align:center">
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+	</div>
+		<!-- Content article -->
+	<section id="section-container">
+		<div class="content clearfix">
+			<div class="main-content">
+				<h1 class="recent-post-title">Recent Posts</h1>
+
+				<div class="post">
+					<img src="https://cdn.pixabay.com/photo/2019/12/06/05/46/alpine-village-4676673_1280.jpg" alt="" class="post-image">
+					<div class="post-preview">
+						<h1><a href="#">Barnsley House</a></h1>
+						<i class="far fa-user"><b>Michelin-Starred Dine & Stay</b></i>
+						<p class="preview-text">
+							Enjoy a Special Midweek Break with four nights for the price of three… Enjoy a four night break that includes: Overnight accommodation in a double or twin room of your choice…
+						</p>
+						<a href="https://www.prideofbritainhotels.com/offer/special-midweek-break/" target="_blank" class="btn-text-more read-more">Read More</a>
+					</div>
+				</div>
+
+				<div class="post">
+					<img src="https://cdn.pixabay.com/photo/2018/02/24/17/17/window-3178666_1280.jpg" class="post-image">
+					<div class="post-preview">
+						<h1><a href="#">The Dunstane Houses</a></h1>
+						<i class="far fa-user"><b>Special Midweek Break</b></i>
+						<p class="preview-text">
+							Every is gonna sit in the back of the motor! Hang on lads, we’ve got a great idea. Here’s the plan: rendezvous at the Dunstane Houses, we’ll hook you…
+						</p>
+						<a href="https://www.prideofbritainhotels.com/offer/suite-romance/" target="_blank" class="btn-text-more read-more">Read More</a>
+					</div>
+				</div>
+
+				<div class="post">
+					<img src="https://cdn.pixabay.com/photo/2016/12/11/18/10/apartment-1899964_1280.jpg" class="post-image">
+					<div class="post-preview">
+						<h1><a href="#">The Goring</a></h1>
+						<i class="far fa-user"><b>Luxury Golf Break</b></i>
+						<p class="preview-text">
+							With its Michelin-starred Dining Room, The Goring is well known for its exceptional food. Plan a special occasion at The Goring and enjoy an overnight stay accompanied by dinner in…
+						</p>
+						<a href="https://www.prideofbritainhotels.com/offer/bring-the-family/" target="_blank" class="btn-text-more read-more">Read More</a>
+					</div>
+				</div>
+			</div>
+
+			<aside class="aside-container">
+
+				<div class="aside-right">
+					<div class="section search">
+						<h2 class="section-title">Search</h2>
+						<form action="news.html" method="post">
+							<input type="text" name="search-term" class="text-input" placeholder="Search...">
+						</form>
+					</div>
+					 
+					<div class="section topics">
+						<h2 class="section-title">Topics</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="news.html">News</a></li>
+							<li><a href="reservation.html">Reservation</a></li>
+							<li><a href="index.html#footer-container">Contacts</a></li>
+							<li><a href="news.html#images-section">Gallery</a></li>
+							<li><a href="index.html#footer-container">Information</a></li>
+							<li><a href="news.html#gallery">Sale</a></li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+		</div>
+	</section>
+
+	<!-- Pictures-->
+	<section id="images-section">
+		<h1 id="our-rooms">Our Rooms</h1>
+		<div class="container">
+	        <div class="row"> 
+	            <div class="inner-container first"></div>
+	            <div class="inner-container second"></div>
+	            <div class="inner-container third"></div>
+	            <div class="inner-container forth"></div>
+	            <div class="inner-container fifth"></div>
+	        </div>
+	        <div class="row"> 
+	            <div class="inner-container six"></div>
+	            <div class="inner-container seven"></div>
+	            <div class="inner-container eight"></div>
+	            <div class="inner-container nine"></div>
+	            <div class="inner-container ten"></div>
+	        </div>
+    	</div>
+    </section>
+
+    <footer class="main-footer">
+    	<div class="footer-bottom">
+			&copy; demetrakaram.com | Designed by Demetra K.	
+		</div>
+    </footer>
+
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+</body>
+</html>

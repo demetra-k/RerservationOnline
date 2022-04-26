@@ -1,0 +1,614 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: verdana;
+	box-sizing: border-box
+}
+
+html, .main-container{
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	background: rgba(17,80,75,.05);
+	width: -15%;
+}
+.mySlides {
+	display: none
+}
+img {
+	vertical-align: middle;
+	width: 100%;
+	margin-top: 0px;
+	height: 465px;
+}
+
+.slideshow-container {
+  	position: relative;
+  	margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 48px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/*Content article*/
+#section-container{
+	background: rgba(17,80,75,.05);
+}
+.content{
+	width: 90%;
+	margin: 30px auto 30px;
+}
+.content .main-content{
+	width: 70%;
+	float: left;
+}
+.content .main-content .recent-post-title{
+	margin: 20px;
+	color: rgb(95, 107, 84);
+}
+.content .main-content .post-preview a{
+	color: rgb(0, 126, 114);
+}
+.content .main-content .post{
+	width: 95%;
+	height: 270px;
+	margin: 20px auto;
+	border-radius: 5px;
+	background: white;
+	position: relative;
+}
+#section-container .main-content .post:hover{
+	padding-left: 15px;
+	transition: all 0.3s;
+	cursor: pointer;
+	color: #000;
+	border-radius: 5px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.content .main-content .post .read-more{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	border: 1px solid #006669;
+	background: transparent;
+	border-radius: 0px;
+	color: #006669 !important;
+}
+.content .main-content .post .read-more:hover{
+	background: #006669;
+	color: white !important;
+	transition: .25s;
+	border-radius: 5px;
+}
+.content .main-content .post .post-image{
+	width: 34%;
+	height: 87%;
+	float: left;
+	border-radius: 6px;
+	margin-top: 19px;
+	margin-left: 10px;
+}
+.content .main-content .post .post-preview{
+	width: 60%;
+	padding: 10px;
+	float: right;
+	font-family: verdana;
+}
+.content .aside-container{
+	width: 30%;
+	float: left;
+	height: 300px;
+}
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.btn-text-more{
+	padding: .5rem 1rem;
+	background: #006669;
+	color: white;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	text-decoration: none;
+}
+.btn-text-more:hover{
+	color: white !important;
+	background: #005255;
+}
+.content .aside-container .section{
+	background: white;
+	padding: 20px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.content .aside-container .section .section-title{
+	margin: 10px 0px 10px 0px;
+	color: rgb(0, 126, 114);
+}
+.content .aside-container .section.search{
+	margin-top: 69px;
+}
+.content .aside-container .section.topics ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	border-top: 1px solid #e0e0e0;
+} 
+.content .aside-container .section.topics ul li a{
+	display: block;
+	padding: 15px 0px 15px 0px;
+	border-bottom: 1px solid #e0e0e0;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+.content .aside-container .section.topics ul li a:hover{
+	padding-left: 15px;
+	transition: all 0.3s;
+	cursor: pointer;
+	color: #fff;
+	background: rgb(0, 126, 114);
+	border-radius: 5px;
+}
+.text-input{
+	padding: .7rem 1rem;
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #e0e0e0;
+	outline: none;
+	color: green;
+	line-height: 1.5rem;
+	font-size: 1.2em;
+	font-family: 'Lora', serif;
+
+}
+.text-input:hover{
+	color: #fff;
+	background: rgba(0, 126, 114,.5);
+	border-radius: 5px;
+}
+.pictures-div{
+	width: 100%;
+}
+/* Images Blog */
+#our-rooms{
+	text-align: center;
+	font-size: 33px;
+	font-family: verdana;
+	margin-bottom: 17px;
+	margin-top: 58px;
+	color: rgb(0, 126, 114);
+}
+.container{
+    background: url("https://cdn.pixabay.com/photo/2019/12/06/05/46/alpine-village-4676673_1280.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 594px;
+}
+.row {
+    width: 100%;
+    height: 297px;
+}
+.inner-container{
+    float:left;
+    width: 19.99%;
+    height: 297px;
+    border: 1px solid gray;
+}
+.first:hover {
+    background: url("https://cdn.pixabay.com/photo/2019/05/24/11/00/beautiful-4226020_960_720.jpg") no-repeat center center;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.second:hover{
+	background: url("https://cdn.pixabay.com/photo/2017/03/22/17/39/kitchen-2165756_1280.jpg") no-repeat center;
+	background-size: cover;
+    cursor: pointer;
+}
+.third:hover{
+	background: url("https://cdn.pixabay.com/photo/2015/10/20/18/57/furniture-998265_1280.jpg") no-repeat center;
+	background-size: 100% 100%;
+    cursor: pointer;
+}
+.forth:hover{
+	background: url("https://cdn.pixabay.com/photo/2017/06/13/22/42/kitchen-2400367_1280.jpg") no-repeat center;
+	background-size: cover;
+    cursor: pointer;
+}
+.fifth:hover{
+	background: url("https://cdn.pixabay.com/photo/2016/09/22/11/55/kitchen-1687121_1280.jpg") no-repeat center;
+	background-size: cover;
+    cursor: pointer;
+}
+.six:hover{
+	background: url("https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406_1280.jpg") no-repeat center;
+	background-size: cover;
+    cursor: pointer;
+}
+.seven:hover{
+	background: url("https://cdn.pixabay.com/photo/2017/04/28/22/16/room-2269594_1280.jpg") no-repeat center;
+	background-size: cover;
+    cursor: pointer;
+}
+.eight:hover{
+	background: url("https://cdn.pixabay.com/photo/2017/10/01/00/49/architecture-2804069_1280.jpg") no-repeat center;
+	background-size: cover;
+    cursor: pointer;
+}
+.nine:hover{
+	background: url("https://cdn.pixabay.com/photo/2018/10/28/12/44/interior-3778708_1280.jpg") no-repeat center;
+	background-size: cover;
+    cursor: pointer;
+}
+.ten:hover{
+	background: url("https://cdn.pixabay.com/photo/2018/01/23/16/22/indoors-3101776_1280.jpg") no-repeat center;
+	background-size: cover;
+    cursor: pointer;
+}
+footer{
+	background-color: rgb(230, 234, 234);
+	color: #3e653ee0;
+	padding: 15px;
+	text-align: center;
+	margin-top: 0px;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media screen and (max-width: 1023px) and (min-width: 768px){
+	body{
+		overflow-x: hidden;
+	}
+	.mySlides img{
+  	height: 273px;
+  }
+  .prev, .next,.text {
+  	font-size: 16px;
+  	top: 201px;
+  }
+  .dot{
+  	height: 10px;
+  	width: 10px;
+  }
+  .recent-post-title{
+  	font-size: 35px;
+  	text-align: center;
+  }
+  #section-container{
+  	width: 1250px;
+  	height: 1580px;
+  	margin-left: -28px;
+  	}
+  	.aside-container{
+  		width: 1250px;
+  		float: none;
+  	}
+  	.content .main-content{
+  		float: none;
+  	}
+  	.aside-right{
+  		width: 789px;
+  		margin-top: -57px;
+  	}
+  	.section .topics{
+  		text-align: center;
+  	}
+  .content .main-content .post{
+  	width: 100%;
+  }
+  .container{
+  	width: 802px;
+  	height: 1485px;
+  	margin-left: 33px;
+  }
+  .first{
+  	width: 50%;
+  }
+  .second{
+  	width: 50%;
+  }
+  .third{
+  	width: 50%;
+  }
+  .forth{
+  	width: 50%;
+  }
+  .fifth{
+  	width: 50%;
+  }
+  .six{
+  	width: 50%;
+  }
+  .seven{
+  	width: 50%;
+  }
+  .eight{
+  	width: 50%
+  }
+  .nine{
+  	width: 50%
+  }
+  .ten{
+  	width: 50%;
+  }
+  footer{
+  	text-align: center;
+  	width: 100%;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 480px){
+
+	body{
+	overflow-x: hidden;
+	text-align: center;
+	}
+
+	.mySlides img{
+  	height: 173px;
+ 	}
+ 	.text {
+ 		display: none;
+ 	}
+  	.prev{
+  		display: none;
+  	}
+  	 .next{
+  	font-size: 25px;
+  	top: 80px;/
+  	}
+
+  	.dot{
+  	height: 7px;
+  	width: 7px;
+  	}
+  .recent-post-title{
+  	font-size: 25px;
+  	text-align: left;
+  }
+  #section-container{
+  	width: 100%;
+  	height: 1261px;
+  	margin-right:  100px;
+  	text-align: center;
+  	}
+  	.content{
+  	width: 100%;
+  	}
+  	.content .main-content .post .post-preview {
+  		height: 50px;
+  	}
+  	.aside-container{
+  		width: 1250px;
+  		float: none;
+  	}
+  	.content .main-content{
+  		float: none;
+  	}
+  	.aside-right{
+  		width: 452px;
+  		margin-top: -57px;
+  		margin-left: 18px;
+  	}
+  	.section .topics{
+  		text-align: center;
+  	}
+  .content .main-content .post{
+  	width: 447px;
+  	height: 199px;
+  	margin-left: 24px;
+  	font-size: 13px;
+  }
+  .container{
+  	width: 707px;
+  	margin-left: 22px;
+  }
+  .first{
+  	width: 25%;
+  	height: 50%;
+  }
+  .second{
+  	width: 25%;
+  	height: 50%;
+  }
+  .third{
+  	width: 25%;
+  	height: 50%;
+  }
+  .forth{
+  	width: 25%;
+  	height: 50%;
+  }
+  .fifth{
+  	width: 100%;
+  	height: 50%;
+  }
+  .six{
+  	width: 25%;
+  	height: 50%;
+  }
+  .seven{
+  	width: 25%;
+  	height: 50%;
+  }
+  .eight{
+  	width: 25%;
+  	height: 50%;
+  }
+  .nine{
+  	width: 25%;
+  	height: 50%;
+  }
+  .ten{
+  	width: 100%;
+  	height: 50%;
+  }
+  footer{
+  	text-align: center;
+  	width: 100%;
+  	width: 100%;
+  }
+}
+@media screen and (max-width: 479px){
+
+	body{
+	overflow-x: hidden;
+	text-align: center;
+	}
+
+	.mySlides img{
+  	height: 173px;
+ 	}
+ 	.text {
+ 		display: none;
+ 	}
+  	.prev{
+  		display: none;
+  	}
+  	 .next{
+  	font-size: 25px;
+  	top: 80px;
+  	}
+
+  	.dot{
+  	height: 7px;
+  	width: 7px;
+  	}
+
+  	.recent-post-title{
+  	font-size: 25px;
+  	text-align: left;
+  }
+  #section-container{
+  	width: 100%;
+  	height: 1261px;
+  	margin-right:  100px;
+  	text-align: center;
+  	}
+  	.content{
+  	width: 100%;
+  	}
+  	.content .main-content .post .post-preview {
+  		height: 50px;
+  	}
+  	.aside-container{
+  		width: 250px;
+  		float: none;
+  	}
+  	.content .main-content{
+  		float: none;
+  	}
+  	.aside-right{
+  		width: 284px;
+  		margin-top: -57px;
+  		margin-left: 92px;
+  	}
+  	.section .topics{
+  		text-align: center;
+  	}
+  .content .main-content .post{
+  	width: 417px;
+  	height: 171px;
+  	margin-left: 24px;
+  	font-size: 11px;
+  }
+  .container{
+  	width: 707px;
+  	margin-left: 22px;
+  }
+  .first{
+  	width: 20%;
+  	height: 50%;
+  }
+  .second{
+  	width: 25%;
+  	height: 50%;
+  }
+  .third{
+  	width: 20%;
+  	height: 50%;
+  }
+  .forth{
+  	width: 25%;
+  	height: 50%;
+  }
+  .fifth{
+  	width: 100%;
+  	height: 50%;
+  }
+  .six{
+  	width: 20%;
+  	height: 50%;
+  }
+  .seven{
+  	width: 25%;
+  	height: 50%;
+  }
+  .eight{
+  	width: 20%;
+  	height: 50%;
+  }
+  .nine{
+  	width: 25%;
+  	height: 50%;
+  }
+  .ten{
+  	width: 100%;
+  	height: 50%;
+  }
+  footer{
+  	text-align: center;
+  	width: 100%;
+  	width: 103%;
+  }
+}
